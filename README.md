@@ -45,27 +45,6 @@ I operate at the intersection of business, engineering, and data.
 
 ---
 
-## Experience Snapshot
-
-### Docsie.io – Manager (Business Analyst)  
-Sep 2023 – Present
-
-- Own end-to-end requirement discovery and delivery for a global SaaS platform.
-- Translate business objectives into functional and technical requirements.
-- Design UAT strategies and prevent release-blocking defects.
-- Use product and web analytics to identify UX friction and adoption drop-offs.
-- Coordinate across engineering, DevOps, product, and customer IT teams.
-
-### Previous Roles
-
-- Manager (Business Analyst), Kadel Labs  
-- Assistant Project Lead (Business Analyst), Arcgate  
-- Senior Executive (Business Analyst), VOIS  
-
-Full experience details available on LinkedIn.
-
----
-
 ## Featured Projects
 
 ### 1. Product Funnel Analysis (SaaS Use Case)
@@ -110,41 +89,6 @@ I am interested in:
 If you are working on data-driven products or applied AI in production environments, feel free to connect.
 
 Email: stanley.in.manit@gmail.com
-
-
-<h2>👨‍💻 Software Development Projects:</h2>
-
-- <b>Data Structures and Algorithms Practice (AlgoExpert)</b>
-  - [Praciting DS & Algos in Python](https://github.com/joshmadakor1/Algorithms-Practice)
-- <b>Full Stack Web App (React, NodeJS, Azure, and Machine Learning Components)</b>
-  - [Image Analysis Middleware](https://github.com/joshmadakor1/4chan-Image-Analysis-Middleware-C964) <b><i>(Potentially NSFW)</b></i>
-- <b>PowerShell</b>
-  - [Windows EventLog: Failed RDP Logins Source IP to full GeoData Conversion](https://github.com/joshmadakor1/Sentinel-Lab)
-  - [JWipe (Disk Wiping Utility)](https://github.com/joshmadakor1/Jwipe.PowerShell)
-  - [Active Directory Bulk User Creation](https://github.com/joshmadakor1/AD_PS)
-  - [FIM (File Integrity Monitor)](https://github.com/joshmadakor1/PowerShell-Integrity-FIM)
-- <b>C# (.NET Desktop Applications)</b>
-  - [Ransomware Proof of Concept (Encrypter)](https://github.com/joshmadakor1/EncrypterPOC)
-  - [Ransomware Proof of Concept (Decrypter)](https://github.com/joshmadakor1/DecrypterPOC)
-  - [Keylogger with Email Capability](https://github.com/joshmadakor1/Key-Logger-With-Email)
-- <b>Python</b>
-  - [Package Delivery Application (Datastructures and Algorithms Demo)](https://github.com/joshmadakor1/Package-Delivery-Pathfinding-Algorithm)
-
-<h2>👨‍💻 Certifications:</h2>
-
-- <b>Machine Learning Specialization – Stanford Online (2026)<b>
-- <b>Mathematics for Machine Learning – Coursera (2025)<b>
-- <b>Google Business Intelligence Certificate – Google (2025)<b>
-- <b>Certified Business Analysis Professional (CBAP) – IIBA (2025)<b>
-- <b>IELTS General – 8.0/10 | CEFR C1 (2025)<b>
-
-<h2>📺 Popular YouTube Videos</h2>
-
-- [How to get into Cybersecurity Starting From Zero](https://www.youtube.com/watch?v=a83ASGn_V_s)
-- [A Day in the Life of a Cybersecurity Anayst](https://www.youtube.com/watch?v=uHy3oM7NnoU)
-- [How to Create a KeyLogger (C#)](https://www.youtube.com/watch?v=N-L9hklSlNk)
-- [Ransomware Demonstration (C#)](https://www.youtube.com/watch?v=OfvdQeh79s0)
-- [Is WGU Legit?](https://www.youtube.com/watch?v=E2MwRWxDBkA)
 
 <h2> 🤳 Connect with me:</h2>
 

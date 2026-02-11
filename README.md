@@ -1,4 +1,116 @@
-<h1>Hi, I'm Stanley! <br/><a href="https://github.com/stageor">Programmer</a>, <a href="https://www.linkedin.com/in/stageor/">Cybersecurity Professional</a>, <a href="https://www.youtube.com/@clastageo">YouTuber</a></h1>
+# Stanley George
+
+Manager, Product Analytics | Data Analytics | Applied Machine Learning | Product AI  
+Bengaluru, India  
+
+Portfolio: https://stageor.github.io/  
+LinkedIn: https://www.linkedin.com/in/stageor  
+Email: stanley.in.manit@gmail.com  
+
+---
+
+## About Me
+
+I am a cross-functional analytics professional with 9+ years of experience working across SaaS platforms, enterprise systems, and data-driven product environments.
+
+My focus areas:
+- Product Analytics
+- Applied Machine Learning
+- KPI Design and Experimentation
+- Business Process Optimization
+- Data Visualization and Decision Intelligence
+
+I operate at the intersection of business, engineering, and data.
+
+---
+
+## Core Competencies
+
+- Product Analytics and Funnel Analysis  
+- A/B Testing and Statistical Inference  
+- Predictive Modeling and Regression  
+- Stakeholder Workshop Facilitation  
+- Requirement Engineering and UAT Strategy  
+- Data Modeling and KPI Framework Design  
+
+---
+
+## Technical Stack
+
+**Languages:** Python, SQL  
+**Analytics:** Power BI, Matplotlib, Excel  
+**ML:** Scikit-learn, Supervised Learning, Unsupervised Learning  
+**Concepts:** Probability, Statistics, Linear Algebra, Model Evaluation  
+**Tools:** Jira, Figma, Azure AD (enterprise access workflows)
+
+---
+
+## Experience Snapshot
+
+### Docsie.io – Manager (Business Analyst)  
+Sep 2023 – Present
+
+- Own end-to-end requirement discovery and delivery for a global SaaS platform.
+- Translate business objectives into functional and technical requirements.
+- Design UAT strategies and prevent release-blocking defects.
+- Use product and web analytics to identify UX friction and adoption drop-offs.
+- Coordinate across engineering, DevOps, product, and customer IT teams.
+
+### Previous Roles
+
+- Manager (Business Analyst), Kadel Labs  
+- Assistant Project Lead (Business Analyst), Arcgate  
+- Senior Executive (Business Analyst), VOIS  
+
+Full experience details available on LinkedIn.
+
+---
+
+## Featured Projects
+
+### 1. Product Funnel Analysis (SaaS Use Case)
+- Identified user drop-offs across onboarding journey
+- Designed KPI tracking model
+- Proposed optimization experiments
+
+### 2. Predictive Modeling Experiments
+- Built regression and classification models using Python
+- Applied feature engineering and model evaluation techniques
+- Focused on business-relevant outcome metrics
+
+### 3. Data Structures and Algorithms Practice
+- Solved 150+ problems in Python
+- Focus areas: Arrays, Trees, Graphs, Dynamic Programming
+- Emphasis on time and space optimization
+
+---
+
+## Certifications
+
+- Machine Learning Specialization – Stanford Online (2026)
+- Mathematics for Machine Learning – Coursera (2025)
+- Google Business Intelligence Certificate – Google (2025)
+- Certified Business Analysis Professional (CBAP) – IIBA (2025)
+- IELTS Academic – CEFR C1 (2025)
+
+---
+
+## What I Build
+
+I am interested in:
+- Product intelligence systems
+- Analytics-driven feature prioritization
+- Applied ML for real business constraints
+- Scalable KPI dashboards for decision-makers
+
+---
+
+## Contact
+
+If you are working on data-driven products or applied AI in production environments, feel free to connect.
+
+Email: stanley.in.manit@gmail.com
+
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
@@ -45,18 +157,3 @@
 [youtube]: https://www.youtube.com/@clastageo
 [instagram]: https://www.instagram.com/joshmadakor/
 [linkedin]: https://www.linkedin.com/in/stageor/
-
-<!--
-**joshmadakor1/joshmadakor1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->

@@ -18,6 +18,14 @@
 - <b>Python</b>
   - [Package Delivery Application (Datastructures and Algorithms Demo)](https://github.com/joshmadakor1/Package-Delivery-Pathfinding-Algorithm)
 
+<h2>👨‍💻 Certifications:</h2>
+
+- <b>Machine Learning Specialization – Stanford Online (2026)<b>
+- <b>Mathematics for Machine Learning – Coursera (2025)<b>
+- <b>Google Business Intelligence Certificate – Google (2025)<b>
+- <b>Certified Business Analysis Professional (CBAP) – IIBA (2025)<b>
+- <b>IELTS General – 8.0/10 | CEFR C1 (2025)<b>
+
 <h2>📺 Popular YouTube Videos</h2>
 
 - [How to get into Cybersecurity Starting From Zero](https://www.youtube.com/watch?v=a83ASGn_V_s)

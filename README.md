@@ -34,4 +34,4 @@ I operate at the intersection of business, engineering, and data.
 ## Contact
 
 If you are working on data-driven products or applied AI in production environments, feel free to connect.
-[![LinkedIn](https://img.shields.io)](https://www.linkedin.com/in/stageor/)
+https://www.linkedin.com/in/stageor/

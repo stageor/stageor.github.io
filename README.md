@@ -3,35 +3,66 @@
 ---
 
 ## About Me
-I am a cross-functional analytics professional with 9+ years of experience working across SaaS platforms, enterprise systems, and data-driven product environments.
-I operate at the intersection of business, engineering, and data.
+
+I am a cross-functional analytics professional with 9+ years of experience across SaaS platforms, enterprise systems, and data-driven product environments.  
+I work at the intersection of business, engineering, and data, translating requirements into measurable analytical outcomes.
 
 ---
 
 ## Technical Stack
+
 **Languages:** Python, SQL  
 **Analytics:** Power BI, Matplotlib, Excel  
-**ML:** Scikit-learn, Supervised Learning, Unsupervised Learning  
+**Machine Learning:** Scikit-learn, Supervised Learning, Unsupervised Learning  
 **Concepts:** Probability, Statistics, Linear Algebra, Model Evaluation  
-**Tools:** Jira, Confluence, Figma, Azure AD (enterprise access workflows)
+**Tools:** Jira, Confluence, Figma, Azure AD  
 
 ---
 
 ## Featured Projects
 
 ### 1. Product Funnel Analysis (SaaS Use Case)
-- Identified user drop-offs across onboarding journey
-- Designed KPI tracking model
-- Proposed optimization experiments
+
+- Identified user drop-offs across onboarding journey  
+- Designed KPI tracking framework  
+- Proposed structured optimization experiments  
+
+Example structure:
+
+```
+product-funnel-analysis/
+│
+├── data/
+├── notebooks/
+│   └── funnel_analysis.ipynb
+├── dashboard/
+│   └── funnel_dashboard.pbix
+└── README.md
+```
+
+---
 
 ### 2. Predictive Modeling Experiments
-- Built regression and classification models using Python
-- Applied feature engineering and model evaluation techniques
-- Focused on business-relevant outcome metrics
+
+- Built regression and classification models using Python  
+- Applied feature engineering and validation techniques  
+- Focused on business-relevant performance metrics  
+
+Example structure:
+
+```
+predictive-modeling/
+│
+├── data/
+├── notebooks/
+│   └── modeling.ipynb
+├── models/
+└── README.md
+```
 
 ---
 
 ## Contact
 
-If you are working on data-driven products or applied AI in production environments, feel free to connect.
+If you are working on data-driven products or applied AI in production environments, feel free to connect:
 https://www.linkedin.com/in/stageor/

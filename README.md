@@ -9,13 +9,33 @@ I work at the intersection of business, engineering, and data, translating requi
 
 ---
 
-## Technical Stack
+## Technical Stack Structure
 
-**Languages:** Python, SQL  
-**Analytics:** Power BI, Matplotlib, Excel  
-**Machine Learning:** Scikit-learn, Supervised Learning, Unsupervised Learning  
-**Concepts:** Probability, Statistics, Linear Algebra, Model Evaluation  
-**Tools:** Jira, Confluence, Figma, Azure AD  
+```
+technical-stack/
+│
+├── languages/
+│   ├── python
+│   └── sql
+├── analytics/
+│   ├── power-bi
+│   ├── matplotlib
+│   └── excel
+├── machine-learning/
+│   ├── scikit-learn
+│   ├── supervised-learning
+│   └── unsupervised-learning
+├── concepts/
+│   ├── probability
+│   ├── statistics
+│   ├── linear-algebra
+│   └── model-evaluation
+└── tools/
+    ├── jira
+    ├── confluence
+    ├── figma
+    └── azure-ad
+```
 
 ---
 

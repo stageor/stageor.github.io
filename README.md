@@ -41,7 +41,6 @@ technical-stack/
 ## Featured Projects
 
 ### 1. Product Funnel Analysis (SaaS Use Case)
-
 - Identified user drop-offs across onboarding journey  
 - Designed KPI tracking framework  
 - Proposed structured optimization experiments  

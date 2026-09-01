@@ -5,7 +5,6 @@
 ## About Me
 
 I am a cross-functional analytics professional with 9+ years of experience across SaaS platforms, enterprise systems, and data-driven product environments. I work at the intersection of business, engineering, and data, translating requirements into measurable analytical outcomes.
-
 ---
 
 ## Technical Stack Structure

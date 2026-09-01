@@ -67,7 +67,6 @@ product-funnel-analysis/
 - Focused on business-relevant performance metrics  
 
 Example structure:
-
 ```
 predictive-modeling/
 │

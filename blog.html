@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+section: blog
+---
+<section class="hero wrap">
+  <div class="eyebrow">Technical</div>
+  <h1>Blog</h1>
+  <p class="lede">Notes on AI/ML, machine vision, NLP, and whatever I'm building or debugging.</p>
+</section>
+
+<section class="block wrap">
+  {% for post in site.posts %}
+  <div class="entry">
+    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
+    <div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      {% if post.tags.size > 0 %}<span class="tag">{{ post.tags | first }}</span>{% endif %}
+    </div>
+  </div>
+  {% else %}
+  <p>No posts yet. Add a markdown file to <code>_posts/</code> to publish your first one.</p>
+  {% endfor %}
+</section>

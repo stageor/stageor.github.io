@@ -1,0 +1,274 @@
+/* ---------------------------------------------------------
+   Tokens
+--------------------------------------------------------- */
+:root {
+  --paper:    #eef0f4;
+  --surface:  #ffffff;
+  --ink:      #141a21;
+  --ink-soft: #4a5260;
+  --rule:     #d6dbe3;
+  --accent:   #3457d5;   /* signal blue */
+  --accent-2: #4f7268;   /* quiet teal, used for "thoughts" */
+  --accent-2-bg: #e7eeec;
+  --accent-bg: #e8ecfb;
+  --max: 46rem;
+  --max-wide: 64rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .serif {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 560;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 0.5em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { text-decoration-color: var(--ink); }
+
+code, .mono {
+  font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  font-size: 0.88em;
+}
+
+p { margin: 0 0 1.1em; color: var(--ink-soft); }
+
+.wrap {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+.site-header .brand {
+  font-family: "Fraunces", serif;
+  font-weight: 560;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.site-header nav { display: flex; gap: 1.6rem; }
+.site-header nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.site-header nav a:hover,
+.site-header nav a.active { color: var(--ink); }
+
+/* ---------------------------------------------------------
+   Hero
+--------------------------------------------------------- */
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.hero .eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  max-width: 38rem;
+}
+.hero p.lede {
+  max-width: 34rem;
+  font-size: 1.08rem;
+  margin-top: 1rem;
+}
+.hero .links { margin-top: 1.6rem; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.hero .links a { font-size: 0.95rem; }
+
+/* ---------------------------------------------------------
+   Sections / lists
+--------------------------------------------------------- */
+section.block { padding: 3rem 0; border-bottom: 1px solid var(--rule); }
+section.block:last-of-type { border-bottom: none; }
+
+.block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+}
+.block-head h2 { font-size: 1.5rem; }
+.block-head .see-all { font-size: 0.9rem; white-space: nowrap; }
+
+.entry {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1.5rem;
+}
+.entry:first-of-type { border-top: none; }
+.entry .meta {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  padding-top: 0.2rem;
+}
+.entry h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+.entry h3 a { color: var(--ink); text-decoration: none; }
+.entry h3 a:hover { color: var(--accent); }
+.entry p { margin-bottom: 0.5rem; font-size: 0.97rem; }
+.entry .tag {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 3px;
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+.entry .tag.opinion { background: var(--accent-2-bg); color: var(--accent-2); }
+
+@media (max-width: 640px) {
+  .entry { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+
+/* ---------------------------------------------------------
+   Project / work entries
+--------------------------------------------------------- */
+.project {
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--rule);
+}
+.project:first-of-type { border-top: none; }
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.project h3 { font-size: 1.2rem; }
+.project .stack {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.project p { max-width: 42rem; }
+.project .links a { margin-right: 1rem; font-size: 0.9rem; }
+
+/* ---------------------------------------------------------
+   Post page
+--------------------------------------------------------- */
+.post-head {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--rule);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.post-head .eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.post-head .eyebrow.opinion { color: var(--accent-2); }
+.post-head h1 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
+.post-head .sub-meta {
+  margin-top: 0.9rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.post-body {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+.post-body h2 { font-size: 1.4rem; margin-top: 2em; }
+.post-body h3 { font-size: 1.15rem; margin-top: 1.6em; }
+.post-body img { max-width: 100%; border-radius: 4px; }
+.post-body pre {
+  background: var(--ink);
+  color: #e8ecfb;
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.86rem;
+}
+.post-body code { background: var(--surface); padding: 0.1em 0.35em; border-radius: 3px; }
+.post-body pre code { background: none; padding: 0; }
+.post-body blockquote {
+  margin: 1.5em 0;
+  padding-left: 1.1em;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------
+   Page (about, etc.)
+--------------------------------------------------------- */
+.page-body {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3.5rem 0 4rem;
+}
+.page-body h1 { font-size: 2rem; margin-bottom: 1rem; }
+
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.site-footer p { margin: 0; font-size: 0.86rem; color: var(--ink-soft); }
+.site-footer .links a { margin-left: 1.2rem; font-size: 0.86rem; }
+
+/* Accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

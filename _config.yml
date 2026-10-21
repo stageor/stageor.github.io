@@ -1,3 +1,57 @@
-theme: jekyll-theme-minimal
-title: Stangeor's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Stanley George
+tagline: AI/ML | Portfolio, Blog & Thoughts
+description: >-
+  Portfolio, technical blog, and personal opinion writing from Stanley George,
+  MSc Artificial Intelligence and Machine Learning student at the University of Limerick.
+url: "https://stageor.github.io"
+baseurl: ""
+author: Stanley George
+email: vmgeorge146@gmail.com
+
+# Collections
+collections:
+  thoughts:
+    output: true
+    permalink: /thoughts/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      section: blog
+  - scope:
+      path: ""
+      type: thoughts
+    values:
+      layout: post
+      section: thoughts
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO / feed
+twitter:
+  username: stageor
+  card: summary
+
+social:
+  name: Stanley George
+  links:
+    - https://github.com/stageor
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

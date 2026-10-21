@@ -1,0 +1,26 @@
+---
+layout: default
+title: Thoughts
+permalink: /thoughts/
+section: thoughts
+---
+<section class="hero wrap">
+  <div class="eyebrow">Opinion</div>
+  <h1>Thoughts</h1>
+  <p class="lede">Personal opinions, separate from the technical blog. Takes on AI, education, and whatever else is on my mind.</p>
+</section>
+
+<section class="block wrap">
+  {% for post in site.thoughts %}
+  <div class="entry">
+    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
+    <div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <span class="tag opinion">opinion</span>
+    </div>
+  </div>
+  {% else %}
+  <p>No posts yet. Add a markdown file to <code>_thoughts/</code> to publish your first one.</p>
+  {% endfor %}
+</section>

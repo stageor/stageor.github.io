@@ -1,0 +1,88 @@
+---
+layout: default
+title: Home
+---
+<section class="hero wrap">
+  <div class="eyebrow">AI/ML · University of Limerick</div>
+  <h1>Stanley George builds and teaches applied machine learning.</h1>
+  <p class="lede">
+    MSc Artificial Intelligence and Machine Learning student at the University of Limerick,
+    teaching assistant for Scientific Computations, and a former IT business analyst
+    moving into AI product and engineering work.
+  </p>
+  <div class="links">
+    <a href="{{ '/about/' | relative_url }}">About me &rarr;</a>
+    <a href="https://github.com/stageor">GitHub &rarr;</a>
+    <a href="mailto:{{ site.email }}">Get in touch &rarr;</a>
+  </div>
+</section>
+
+<section class="block wrap">
+  <div class="block-head">
+    <h2>Selected work</h2>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
+      <h3>Add your first project here</h3>
+      <span class="stack">Python · PyTorch</span>
+    </div>
+    <p>
+      A short, plain description of what this project does and the problem it solves.
+      Replace this with a real project from your MSc modules or your own work.
+      The evolutionary robotics coursework or a CE4317 notebook are good candidates to start with.
+    </p>
+    <div class="links">
+      <a href="#">View code</a>
+      <a href="#">Live demo</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
+      <h3>Second project</h3>
+      <span class="stack">Unity · C#</span>
+    </div>
+    <p>
+      Another project entry. Keep each one to a couple of sentences: what it is,
+      what you built it with, and what was hard about it.
+    </p>
+    <div class="links">
+      <a href="#">View code</a>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap">
+  <div class="block-head">
+    <h2>From the blog</h2>
+    <a class="see-all" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+  </div>
+  {% for post in site.posts limit: 3 %}
+  <div class="entry">
+    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
+    <div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      {% if post.tags.size > 0 %}<span class="tag">{{ post.tags | first }}</span>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="block wrap">
+  <div class="block-head">
+    <h2>Thoughts</h2>
+    <a class="see-all" href="{{ '/thoughts/' | relative_url }}">All thoughts &rarr;</a>
+  </div>
+  {% for post in site.thoughts limit: 3 %}
+  <div class="entry">
+    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
+    <div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+      <span class="tag opinion">opinion</span>
+    </div>
+  </div>
+  {% endfor %}
+</section>

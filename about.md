@@ -1,4 +1,3 @@
-cat > about.md << 'EOF'
 ---
 layout: page
 title: About
@@ -19,3 +18,4 @@ Based in Limerick, Ireland, I'm interested in opportunities that bring together 
 
 - GitHub: [github.com/stageor](https://github.com/stageor)
 - LinkedIn: [linkedin.com/in/stanleygeorge01](https://linkedin.com/in/stanleygeorge01)
+- Email: [stanley.in.manit@gmail.com](mailto:stanley.in.manit@gmail.com)

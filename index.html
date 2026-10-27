@@ -3,159 +3,122 @@ layout: default
 title: Home
 ---
 <section class="hero wrap">
-  <h1>Stanley George builds applied machine learning and the data systems it runs on.</h1>
+  <h1>Applied machine learning, and the data systems it runs on.</h1>
   <p class="lede">
-    MSc Artificial Intelligence and Machine Learning student at the University of Limerick,
-    teaching assistant for Scientific Computations, and a former IT business analyst
-    moving into data and AI engineering work.
+    Stanley George. MSc AI/ML at the University of Limerick, teaching assistant for
+    Scientific Computations, and a former IT business analyst now building in data and AI.
   </p>
   <div class="links">
-    <a href="{{ '/about/' | relative_url }}">About me</a>
-    <a href="https://github.com/stageor">GitHub</a>
-    <a href="mailto:{{ site.email }}">Get in touch</a>
+    <a class="btn btn-primary" href="{{ '/about/' | relative_url }}">About me</a>
+    <a class="btn btn-ghost" href="mailto:{{ site.email }}">Get in touch</a>
   </div>
 </section>
 
-<div class="pipeline">
-  <div class="wrap">
-    <div class="pipeline-row">
-      <div class="pipeline-step">
-        <span class="pipeline-label">Ingest</span>
-        <span class="pipeline-detail">ADF · Azure SQL DB</span>
-      </div>
-      <div class="pipeline-step">
-        <span class="pipeline-label">Transform</span>
-        <span class="pipeline-detail">Databricks · PySpark</span>
-      </div>
-      <div class="pipeline-step">
-        <span class="pipeline-label">Model</span>
-        <span class="pipeline-detail">PyTorch · scikit-learn</span>
-      </div>
-      <div class="pipeline-step">
-        <span class="pipeline-label">Serve</span>
-        <span class="pipeline-detail">APIs · dashboards</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="block wrap">
+<section class="block wrap" id="projects">
   <div class="block-head">
-    <h2>Selected work</h2>
+    <h2>Projects</h2>
   </div>
 
   <div class="project">
-    <div class="project-head">
+    <div class="project-art art-1"></div>
+    <div>
       <h3>Spotify data platform on Azure</h3>
       <span class="stack">ADF · Databricks · Unity Catalog · Delta Live Tables · PySpark · Azure SQL DB</span>
-    </div>
-    <p>
-      An end-to-end build on a medallion architecture. Azure SQL Database and a GitHub-hosted
-      file set feed dynamic, parameterised Azure Data Factory pipelines into the bronze layer,
-      with incremental loads and backfilling. Azure Databricks, with Unity Catalog, Spark
-      Structured Streaming, and Autoloader, cleans the data into the silver layer, where
-      metadata-driven notebooks (templated with Jinja2) build a star schema with slowly
-      changing dimensions. Delta Live Tables shape the gold layer, served through a SQL
-      warehouse. Git branching and Databricks Asset Bundles handle CI/CD.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
+      <p>
+        An end-to-end build on a medallion architecture. Azure SQL Database and a GitHub-hosted
+        file set feed dynamic, parameterised Data Factory pipelines into the bronze layer, with
+        incremental loads and backfilling. Databricks, with Unity Catalog, Spark Structured
+        Streaming, and Autoloader, cleans the data into the silver layer, where metadata-driven
+        notebooks build a star schema with slowly changing dimensions. Delta Live Tables shape
+        the gold layer, served through a SQL warehouse.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
 
   <div class="project">
-    <div class="project-head">
+    <div class="project-art art-2"></div>
+    <div>
       <h3>CDC lakehouse with dbt and Airflow</h3>
       <span class="stack">Databricks · dbt · Apache Airflow · Delta Lake · CDC</span>
-    </div>
-    <p>
-      A production-style lakehouse pulling from two sources: an AWS S3 data lake and an
-      agentic Postgres database that stakeholders can query directly in natural language.
-      Change data capture lands updates straight into Delta tables in the Databricks bronze
-      layer; dbt builds a One Big Table with quality checks, ephemeral models, and Jinja
-      templating in the silver layer, then a star schema with slowly changing dimensions in
-      the gold layer. Apache Airflow, running from a custom Docker image, orchestrates the
-      pipeline, which is deployed and version-controlled on GitHub.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
+      <p>
+        A production-style lakehouse pulling from an AWS S3 data lake and an agentic Postgres
+        database that stakeholders can query directly in natural language. Change data capture
+        lands updates straight into Delta tables in the bronze layer; dbt builds a One Big Table
+        with quality checks and Jinja templating in the silver layer, then a star schema with
+        slowly changing dimensions in the gold layer. Apache Airflow orchestrates the pipeline,
+        deployed and version-controlled on GitHub.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
 
   <div class="project">
-    <div class="project-head">
-      <h3>Real-time ride-booking pipeline</h3>
-      <span class="stack">Kafka · Event Hub · Spark Structured Streaming · ADF · FastAPI</span>
-    </div>
-    <p>
-      A real-time streaming pipeline modelled on a ride-booking app. A FastAPI web app
-      publishes ride-confirmation events to an Event Hub (Kafka-compatible) in a
-      producer/consumer pattern, picked up by Spark Structured Streaming and Spark
-      Declarative Pipelines. Azure Data Factory handles the metadata-driven bulk and
-      mapping loads into the bronze layer; the silver layer builds a streaming One Big
-      Table with Jinja-templated, metadata-driven notebooks; the gold layer streams out a
-      star schema with slowly changing dimensions across one fact table and six dimension
-      tables.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
-    </div>
-  </div>
-
-  <div class="project">
-    <div class="project-head">
+    <div class="project-art art-3"></div>
+    <div>
       <h3>Agentic data agent</h3>
       <span class="stack">LangGraph · LangChain · Pydantic · Python</span>
-    </div>
-    <p>
-      A multi-agent system that lets non-technical stakeholders ask for data in plain
-      language. A parent data agent routes each request to one of two sub-agents: a
-      stateful SQL analyst that curates the question, adds database context, generates
-      and safety-checks a SQL query with an LLM, then runs it; and a ReAct-based ETL
-      analyst that loops through a Python toolkit to extract, transform, and load data.
-      Routes between high- and low-capability LLMs by task, uses Pydantic models for
-      structured state, and checks outputs with an LLM-as-judge step.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
+      <p>
+        A multi-agent system that lets non-technical stakeholders ask for data in plain
+        language. A parent agent routes requests to two sub-agents: a stateful SQL analyst that
+        curates the question, adds database context, generates and safety-checks a query, then
+        runs it; and a ReAct-based ETL analyst that loops through a Python toolkit to extract,
+        transform, and load data. Routes between LLMs by task and checks outputs with an
+        LLM-as-judge step.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
 
   <div class="project">
-    <div class="project-head">
+    <div class="project-art art-4"></div>
+    <div>
+      <h3>Real-time ride-booking pipeline</h3>
+      <span class="stack">Kafka · Event Hub · Spark Structured Streaming · ADF · FastAPI</span>
+      <p>
+        A streaming pipeline modelled on a ride-booking app. A FastAPI web app publishes
+        ride-confirmation events to an Event Hub in a producer/consumer pattern, picked up by
+        Spark Structured Streaming. Azure Data Factory handles metadata-driven bulk loads into
+        the bronze layer; the silver layer builds a streaming One Big Table; the gold layer
+        streams out a star schema with slowly changing dimensions.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-art art-5"></div>
+    <div>
       <h3>Orchard of the Last Season</h3>
       <span class="stack">Unity · C#</span>
-    </div>
-    <p>
-      A top-down defence game built for the CS4096 AI for Games module: a farmer and two dogs
-      defend six fruit trees across thirteen nights. Covers both player-assist AI and enemy
-      behaviour, built from scratch in Unity.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
+      <p>
+        A top-down defence game built for the CS4096 AI for Games module: a farmer and two dogs
+        defend six fruit trees across thirteen nights. Covers both player-assist AI and enemy
+        behaviour, built from scratch in Unity.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
 
   <div class="project">
-    <div class="project-head">
+    <div class="project-art art-6"></div>
+    <div>
       <h3>Covertype classifier with Grammatical Evolution</h3>
       <span class="stack">Python · GRAPE · Kaggle</span>
-    </div>
-    <p>
-      A Kaggle competition entry for CS6271 Evolutionary Computation: a binary classifier
-      (Spruce/Fir vs Lodgepole Pine) evolved on a modified Forest Covertype dataset using
-      Grammatical Evolution with the GRAPE library.
-    </p>
-    <div class="links">
-      <a href="https://github.com/stageor">View code</a>
+      <p>
+        A Kaggle competition entry for CS6271 Evolutionary Computation: a binary classifier
+        (Spruce/Fir vs Lodgepole Pine) evolved on a modified Forest Covertype dataset using
+        Grammatical Evolution with the GRAPE library.
+      </p>
+      <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
 </section>
 
-<section class="block wrap">
+<section class="block wrap" id="blog" style="border-top: 1px solid var(--rule);">
   <div class="block-head">
-    <h2>From the blog</h2>
-    <a class="see-all" href="{{ '/blog/' | relative_url }}">All posts</a>
+    <h2>Blog</h2>
+    <a class="see-all underline" href="{{ '/blog/' | relative_url }}">All posts</a>
   </div>
   {% for post in site.posts limit: 3 %}
   <div class="entry">
@@ -169,10 +132,10 @@ title: Home
   {% endfor %}
 </section>
 
-<section class="block wrap">
+<section class="block wrap" id="thoughts" style="border-top: 1px solid var(--rule);">
   <div class="block-head">
     <h2>Thoughts</h2>
-    <a class="see-all" href="{{ '/thoughts/' | relative_url }}">All thoughts</a>
+    <a class="see-all underline" href="{{ '/thoughts/' | relative_url }}">All thoughts</a>
   </div>
   {% for post in site.thoughts limit: 3 %}
   <div class="entry">
@@ -180,7 +143,7 @@ title: Home
     <div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      <span class="tag opinion">opinion</span>
+      <span class="tag opinion">rant</span>
     </div>
   </div>
   {% endfor %}

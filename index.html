@@ -46,16 +46,17 @@ title: Home
 
   <div class="project">
     <div class="project-head">
-      <h3>Azure end-to-end data platform</h3>
-      <span class="stack">ADF · Databricks · Unity Catalog · PySpark · Azure SQL DB</span>
+      <h3>Spotify data platform on Azure</h3>
+      <span class="stack">ADF · Databricks · Unity Catalog · Delta Live Tables · PySpark · Azure SQL DB</span>
     </div>
     <p>
-      A self-directed build covering the full path from raw ingestion to served tables:
-      incremental and backfill-aware pipelines in Azure Data Factory, a medallion lakehouse
-      on Databricks with Unity Catalog governance, Delta Live Tables and Spark Structured
-      Streaming for change data, and a star schema with slowly changing dimensions served
-      out to Azure SQL DB. CI/CD for the Databricks workspace runs through Databricks Asset
-      Bundles.
+      An end-to-end build on a medallion architecture. Azure SQL Database and a GitHub-hosted
+      file set feed dynamic, parameterised Azure Data Factory pipelines into the bronze layer,
+      with incremental loads and backfilling. Azure Databricks, with Unity Catalog, Spark
+      Structured Streaming, and Autoloader, cleans the data into the silver layer, where
+      metadata-driven notebooks (templated with Jinja2) build a star schema with slowly
+      changing dimensions. Delta Live Tables shape the gold layer, served through a SQL
+      warehouse. Git branching and Databricks Asset Bundles handle CI/CD.
     </p>
     <div class="links">
       <a href="https://github.com/stageor">View code</a>

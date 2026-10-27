@@ -2,24 +2,22 @@
    Tokens
 --------------------------------------------------------- */
 :root {
-  --paper:    #eef0f4;
+  --paper:    #f5f7fa;
   --surface:  #ffffff;
-  --ink:      #141a21;
-  --ink-soft: #4a5260;
-  --rule:     #d6dbe3;
-  --accent:   #3457d5;   /* signal blue */
-  --accent-2: #4f7268;   /* quiet teal, used for "thoughts" */
-  --accent-2-bg: #e7eeec;
-  --accent-bg: #e8ecfb;
+  --ink:      #0c1b2a;
+  --ink-soft: #53626f;
+  --rule:     #dde3ea;
+  --accent:       #0078d4;  /* Azure blue */
+  --accent-bg:    #e8f1fb;
+  --accent-2:     #de3f24;  /* Databricks signal orange, used sparingly */
+  --accent-2-bg:  #fbe9e5;
   --max: 46rem;
   --max-wide: 64rem;
 }
 
 * { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -31,9 +29,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .serif {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 560;
+h1, h2, h3, .display {
+  font-family: "Space Grotesk", -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink);
@@ -75,9 +73,9 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
   padding-bottom: 1.1rem;
 }
 .site-header .brand {
-  font-family: "Fraunces", serif;
-  font-weight: 560;
-  font-size: 1.15rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: var(--ink);
   text-decoration: none;
 }
@@ -94,26 +92,87 @@ p { margin: 0 0 1.1em; color: var(--ink-soft); }
    Hero
 --------------------------------------------------------- */
 .hero {
-  padding: 4.5rem 0 3.5rem;
-  border-bottom: 1px solid var(--rule);
-}
-.hero .eyebrow {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.82rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
+  padding: 4rem 0 0;
 }
 .hero h1 {
-  font-size: clamp(1.9rem, 4vw, 2.9rem);
-  max-width: 38rem;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  max-width: 40rem;
 }
 .hero p.lede {
-  max-width: 34rem;
+  max-width: 36rem;
   font-size: 1.08rem;
   margin-top: 1rem;
+  color: var(--ink-soft);
 }
-.hero .links { margin-top: 1.6rem; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.hero .links { margin-top: 1.6rem; display: flex; gap: 1.6rem; flex-wrap: wrap; padding-bottom: 3rem; }
 .hero .links a { font-size: 0.95rem; }
+
+/* Secondary hero (blog / thoughts listing pages) keep the bottom rule */
+.hero.listing { padding-bottom: 3rem; border-bottom: 1px solid var(--rule); }
+.hero.listing .eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.hero.listing.opinion-hero .eyebrow { color: var(--accent-2); }
+
+/* ---------------------------------------------------------
+   Pipeline strip — the one structural signature of this page.
+   A left-to-right read of how the work actually moves:
+   raw data in, through transforms and models, out to something used.
+--------------------------------------------------------- */
+.pipeline {
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+.pipeline-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.pipeline-step {
+  position: relative;
+  padding: 1.5rem 1.6rem;
+  border-left: 1px solid var(--rule);
+}
+.pipeline-step:first-child { border-left: none; }
+.pipeline-step::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.pipeline-step:first-child::before { display: none; }
+.pipeline-label {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+.pipeline-detail {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 700px) {
+  .pipeline-row { grid-template-columns: 1fr 1fr; }
+  .pipeline-step:nth-child(3) { border-left: none; }
+}
+@media (max-width: 460px) {
+  .pipeline-row { grid-template-columns: 1fr; }
+  .pipeline-step { border-left: none; border-top: 1px solid var(--rule); }
+  .pipeline-step:first-child { border-top: none; }
+  .pipeline-step::before { left: 0; top: -4px; }
+}
 
 /* ---------------------------------------------------------
    Sections / lists
@@ -127,8 +186,8 @@ section.block:last-of-type { border-bottom: none; }
   justify-content: space-between;
   margin-bottom: 1.8rem;
 }
-.block-head h2 { font-size: 1.5rem; }
-.block-head .see-all { font-size: 0.9rem; white-space: nowrap; }
+.block-head h2 { font-size: 1.4rem; }
+.block-head .see-all { font-size: 0.88rem; white-space: nowrap; }
 
 .entry {
   padding: 1.5rem 0;
@@ -144,7 +203,7 @@ section.block:last-of-type { border-bottom: none; }
   color: var(--ink-soft);
   padding-top: 0.2rem;
 }
-.entry h3 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+.entry h3 { font-size: 1.1rem; margin-bottom: 0.35rem; font-weight: 600; }
 .entry h3 a { color: var(--ink); text-decoration: none; }
 .entry h3 a:hover { color: var(--accent); }
 .entry p { margin-bottom: 0.5rem; font-size: 0.97rem; }
@@ -167,7 +226,7 @@ section.block:last-of-type { border-bottom: none; }
    Project / work entries
 --------------------------------------------------------- */
 .project {
-  padding: 1.6rem 0;
+  padding: 1.7rem 0;
   border-top: 1px solid var(--rule);
 }
 .project:first-of-type { border-top: none; }
@@ -178,11 +237,12 @@ section.block:last-of-type { border-bottom: none; }
   gap: 1rem;
   flex-wrap: wrap;
 }
-.project h3 { font-size: 1.2rem; }
+.project h3 { font-size: 1.15rem; font-weight: 600; }
 .project .stack {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.78rem;
-  color: var(--ink-soft);
+  color: var(--accent);
+  white-space: nowrap;
 }
 .project p { max-width: 42rem; }
 .project .links a { margin-right: 1rem; font-size: 0.9rem; }
@@ -203,7 +263,7 @@ section.block:last-of-type { border-bottom: none; }
   margin-bottom: 0.8rem;
 }
 .post-head .eyebrow.opinion { color: var(--accent-2); }
-.post-head h1 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
+.post-head h1 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
 .post-head .sub-meta {
   margin-top: 0.9rem;
   font-family: "IBM Plex Mono", monospace;
@@ -216,8 +276,8 @@ section.block:last-of-type { border-bottom: none; }
   margin: 0 auto;
   padding: 2.5rem 0 4rem;
 }
-.post-body h2 { font-size: 1.4rem; margin-top: 2em; }
-.post-body h3 { font-size: 1.15rem; margin-top: 1.6em; }
+.post-body h2 { font-size: 1.35rem; margin-top: 2em; }
+.post-body h3 { font-size: 1.1rem; margin-top: 1.6em; }
 .post-body img { max-width: 100%; border-radius: 4px; }
 .post-body pre {
   background: var(--ink);
@@ -244,7 +304,7 @@ section.block:last-of-type { border-bottom: none; }
   margin: 0 auto;
   padding: 3.5rem 0 4rem;
 }
-.page-body h1 { font-size: 2rem; margin-bottom: 1rem; }
+.page-body h1 { font-size: 1.9rem; margin-bottom: 1rem; }
 
 /* ---------------------------------------------------------
    Footer

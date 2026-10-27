@@ -3,23 +3,63 @@ layout: default
 title: Home
 ---
 <section class="hero wrap">
-  <div class="eyebrow">AI/ML · University of Limerick</div>
-  <h1>Stanley George builds and teaches applied machine learning.</h1>
+  <h1>Stanley George builds applied machine learning and the data systems it runs on.</h1>
   <p class="lede">
     MSc Artificial Intelligence and Machine Learning student at the University of Limerick,
     teaching assistant for Scientific Computations, and a former IT business analyst
-    moving into AI product and engineering work.
+    moving into data and AI engineering work.
   </p>
   <div class="links">
-    <a href="{{ '/about/' | relative_url }}">About me &rarr;</a>
-    <a href="https://github.com/stageor">GitHub &rarr;</a>
-    <a href="mailto:{{ site.email }}">Get in touch &rarr;</a>
+    <a href="{{ '/about/' | relative_url }}">About me</a>
+    <a href="https://github.com/stageor">GitHub</a>
+    <a href="mailto:{{ site.email }}">Get in touch</a>
   </div>
 </section>
+
+<div class="pipeline">
+  <div class="wrap">
+    <div class="pipeline-row">
+      <div class="pipeline-step">
+        <span class="pipeline-label">Ingest</span>
+        <span class="pipeline-detail">ADF · Azure SQL DB</span>
+      </div>
+      <div class="pipeline-step">
+        <span class="pipeline-label">Transform</span>
+        <span class="pipeline-detail">Databricks · PySpark</span>
+      </div>
+      <div class="pipeline-step">
+        <span class="pipeline-label">Model</span>
+        <span class="pipeline-detail">PyTorch · scikit-learn</span>
+      </div>
+      <div class="pipeline-step">
+        <span class="pipeline-label">Serve</span>
+        <span class="pipeline-detail">APIs · dashboards</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="block wrap">
   <div class="block-head">
     <h2>Selected work</h2>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
+      <h3>Azure end-to-end data platform</h3>
+      <span class="stack">ADF · Databricks · Unity Catalog · PySpark · Azure SQL DB</span>
+    </div>
+    <p>
+      A self-directed build covering the full path from raw ingestion to served tables:
+      incremental and backfill-aware pipelines in Azure Data Factory, a medallion lakehouse
+      on Databricks with Unity Catalog governance, Delta Live Tables and Spark Structured
+      Streaming for change data, and a star schema with slowly changing dimensions served
+      out to Azure SQL DB. CI/CD for the Databricks workspace runs through Databricks Asset
+      Bundles.
+    </p>
+    <div class="links">
+      <a href="https://github.com/stageor">View code</a>
+    </div>
   </div>
 
   <div class="project">
@@ -56,7 +96,7 @@ title: Home
 <section class="block wrap">
   <div class="block-head">
     <h2>From the blog</h2>
-    <a class="see-all" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+    <a class="see-all" href="{{ '/blog/' | relative_url }}">All posts</a>
   </div>
   {% for post in site.posts limit: 3 %}
   <div class="entry">
@@ -73,7 +113,7 @@ title: Home
 <section class="block wrap">
   <div class="block-head">
     <h2>Thoughts</h2>
-    <a class="see-all" href="{{ '/thoughts/' | relative_url }}">All thoughts &rarr;</a>
+    <a class="see-all" href="{{ '/thoughts/' | relative_url }}">All thoughts</a>
   </div>
   {% for post in site.thoughts limit: 3 %}
   <div class="entry">

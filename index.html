@@ -84,6 +84,26 @@ title: Home
 
   <div class="project">
     <div class="project-head">
+      <h3>Real-time ride-booking pipeline</h3>
+      <span class="stack">Kafka · Event Hub · Spark Structured Streaming · ADF · FastAPI</span>
+    </div>
+    <p>
+      A real-time streaming pipeline modelled on a ride-booking app. A FastAPI web app
+      publishes ride-confirmation events to an Event Hub (Kafka-compatible) in a
+      producer/consumer pattern, picked up by Spark Structured Streaming and Spark
+      Declarative Pipelines. Azure Data Factory handles the metadata-driven bulk and
+      mapping loads into the bronze layer; the silver layer builds a streaming One Big
+      Table with Jinja-templated, metadata-driven notebooks; the gold layer streams out a
+      star schema with slowly changing dimensions across one fact table and six dimension
+      tables.
+    </p>
+    <div class="links">
+      <a href="https://github.com/stageor">View code</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
       <h3>Agentic data agent</h3>
       <span class="stack">LangGraph · LangChain · Pydantic · Python</span>
     </div>

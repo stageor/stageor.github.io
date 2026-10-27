@@ -65,6 +65,25 @@ title: Home
 
   <div class="project">
     <div class="project-head">
+      <h3>CDC lakehouse with dbt and Airflow</h3>
+      <span class="stack">Databricks · dbt · Apache Airflow · Delta Lake · CDC</span>
+    </div>
+    <p>
+      A production-style lakehouse pulling from two sources: an AWS S3 data lake and an
+      agentic Postgres database that stakeholders can query directly in natural language.
+      Change data capture lands updates straight into Delta tables in the Databricks bronze
+      layer; dbt builds a One Big Table with quality checks, ephemeral models, and Jinja
+      templating in the silver layer, then a star schema with slowly changing dimensions in
+      the gold layer. Apache Airflow, running from a custom Docker image, orchestrates the
+      pipeline, which is deployed and version-controlled on GitHub.
+    </p>
+    <div class="links">
+      <a href="https://github.com/stageor">View code</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
       <h3>Agentic data agent</h3>
       <span class="stack">LangGraph · LangChain · Pydantic · Python</span>
     </div>

@@ -65,6 +65,25 @@ title: Home
 
   <div class="project">
     <div class="project-head">
+      <h3>Agentic data agent</h3>
+      <span class="stack">LangGraph · LangChain · Pydantic · Python</span>
+    </div>
+    <p>
+      A multi-agent system that lets non-technical stakeholders ask for data in plain
+      language. A parent data agent routes each request to one of two sub-agents: a
+      stateful SQL analyst that curates the question, adds database context, generates
+      and safety-checks a SQL query with an LLM, then runs it; and a ReAct-based ETL
+      analyst that loops through a Python toolkit to extract, transform, and load data.
+      Routes between high- and low-capability LLMs by task, uses Pydantic models for
+      structured state, and checks outputs with an LLM-as-judge step.
+    </p>
+    <div class="links">
+      <a href="https://github.com/stageor">View code</a>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-head">
       <h3>Orchard of the Last Season</h3>
       <span class="stack">Unity · C#</span>
     </div>

@@ -132,38 +132,33 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .btn-dark:hover { background: #000; }
 
 /* ---------------------------------------------------------
-   Hero
+   Intro (home page — about, merged with portfolio)
 --------------------------------------------------------- */
-.hero {
-  padding: 7rem 0 5rem;
-  text-align: center;
+.intro {
+  padding: 4.5rem 0 3.5rem;
+  max-width: var(--max);
 }
-.hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4.3rem);
-  max-width: 40rem;
-  margin: 0 auto;
+.intro h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
 }
-.hero p.lede {
-  max-width: 34rem;
-  margin: 1.5rem auto 0;
-  font-size: 1.2rem;
-  color: var(--ink-soft);
+.intro .role {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
 }
-.hero .links {
-  margin-top: 2.2rem;
+.intro p { font-size: 1.05rem; }
+.intro .links {
+  margin-top: 0.6rem;
   display: flex;
-  gap: 0.9rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 1.4rem;
 }
 
-/* Listing-page hero (blog / thoughts) — left aligned, more compact */
+/* Listing-page hero (blog / thoughts) — left aligned, compact */
 .hero.listing {
   text-align: left;
   padding: 4.5rem 0 3rem;
 }
-.hero.listing h1 { margin: 0 auto 0 0; }
-.hero.listing p.lede { margin: 1rem 0 0; }
 .hero.listing .eyebrow {
   font-size: 0.85rem;
   font-weight: 600;
@@ -171,6 +166,13 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   margin-bottom: 0.6rem;
 }
 .hero.listing.opinion-hero .eyebrow { color: var(--accent-2); }
+.hero.listing h1 { font-size: clamp(2.2rem, 5vw, 3rem); }
+.hero.listing p.lede {
+  max-width: 34rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+}
 
 /* ---------------------------------------------------------
    Sections

@@ -2,19 +2,41 @@
 layout: default
 title: Home
 ---
-<section class="hero wrap">
-  <h1>Applied machine learning, and the data systems it runs on.</h1>
-  <p class="lede">
-    Stanley George. MSc AI/ML at the University of Limerick, teaching assistant for
-    Scientific Computations, and a former IT business analyst now building in data and AI.
+<section class="intro wrap">
+  <h1>Stanley George</h1>
+  <p class="role">AI/ML engineer &amp; former IT business analyst</p>
+  <p>
+    I'm an IT Business Analyst and AI Product Owner with over a decade of experience in
+    requirements engineering, systems analysis, product delivery, and digital transformation
+    across enterprise IT and SaaS platforms. I'm currently pursuing an MSc in Artificial
+    Intelligence and Machine Learning at the University of Limerick, Ireland, while working as
+    a Teaching Assistant for the undergraduate Python programming and Scientific Computations
+    module.
+  </p>
+  <p>
+    Throughout my career, I've worked at the intersection of business, technology, and data,
+    translating complex business requirements into practical technical specifications and
+    helping cross-functional teams deliver software products. My experience includes
+    AI-enabled knowledge management, NLP-driven features, API integrations, data modelling,
+    process automation, and analytics.
+  </p>
+  <p>
+    Alongside my professional experience, I'm developing my expertise in machine learning and
+    AI engineering through academic study and hands-on projects involving deep learning,
+    natural language processing, classification, and recommender systems.
+  </p>
+  <p>
+    I hold a Bachelors from the Maulana Azad National Institute of Technology (MANIT), Bhopal,
+    and am a Professional Member of the International Institute of Business Analysis (IIBA).
+    Based in Limerick, Ireland.
   </p>
   <div class="links">
-    <a class="btn btn-primary" href="{{ '/about/' | relative_url }}">About me</a>
-    <a class="btn btn-ghost" href="mailto:{{ site.email }}">Get in touch</a>
+    <a class="underline" href="https://github.com/stageor">GitHub</a>
+    <a class="underline" href="https://linkedin.com/in/stanleygeorge01">LinkedIn</a>
   </div>
 </section>
 
-<section class="block wrap" id="projects">
+<section class="block wrap" id="projects" style="border-top: 1px solid var(--rule);">
   <div class="block-head">
     <h2>Projects</h2>
   </div>
@@ -85,38 +107,4 @@ title: Home
       <div class="links"><a class="underline" href="https://github.com/stageor">View code</a></div>
     </div>
   </div>
-</section>
-
-<section class="block wrap" id="blog" style="border-top: 1px solid var(--rule);">
-  <div class="block-head">
-    <h2>Blog</h2>
-    <a class="see-all underline" href="{{ '/blog/' | relative_url }}">All posts</a>
-  </div>
-  {% for post in site.posts limit: 3 %}
-  <div class="entry">
-    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
-    <div>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      {% if post.tags.size > 0 %}<span class="tag">{{ post.tags | first }}</span>{% endif %}
-    </div>
-  </div>
-  {% endfor %}
-</section>
-
-<section class="block wrap" id="thoughts" style="border-top: 1px solid var(--rule);">
-  <div class="block-head">
-    <h2>Thoughts</h2>
-    <a class="see-all underline" href="{{ '/thoughts/' | relative_url }}">All thoughts</a>
-  </div>
-  {% for post in site.thoughts limit: 3 %}
-  <div class="entry">
-    <div class="meta">{{ post.date | date: "%d %b %Y" }}</div>
-    <div>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-      <span class="tag opinion">rant</span>
-    </div>
-  </div>
-  {% endfor %}
 </section>

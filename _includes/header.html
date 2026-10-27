@@ -7,5 +7,6 @@
       <a href="{{ '/thoughts/' | relative_url }}" {% if page.section == 'thoughts' or page.url == '/thoughts/' %}class="active"{% endif %}>Thoughts</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a>
     </nav>
+    <a class="btn btn-dark header-cta" href="mailto:{{ site.email }}">Contact</a>
   </div>
 </header>

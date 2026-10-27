@@ -71,9 +71,9 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .site-header .wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 0.95rem;
-  padding-bottom: 0.95rem;
+  gap: 2rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
 }
 .site-header .brand {
   font-weight: 700;
@@ -81,8 +81,9 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   letter-spacing: -0.01em;
   color: var(--ink);
   white-space: nowrap;
+  margin-right: auto;
 }
-.site-header nav { display: flex; gap: 2rem; }
+.site-header nav { display: flex; gap: 1.8rem; }
 .site-header nav a {
   color: var(--ink-soft);
   font-size: 0.92rem;
@@ -91,16 +92,23 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 }
 .site-header nav a:hover,
 .site-header nav a.active { color: var(--ink); }
+.site-header .header-cta { flex: 0 0 auto; padding: 0.5rem 1.2rem; font-size: 0.88rem; }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
   .site-header .wrap {
     flex-wrap: wrap;
-    row-gap: 0.6rem;
+    row-gap: 0.7rem;
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
   }
-  .site-header .brand { font-size: 0.95rem; flex: 1 0 100%; }
-  .site-header nav { gap: 1.1rem; flex: 1 0 100%; }
+  .site-header .brand { font-size: 0.95rem; flex: 1 0 auto; margin-right: 0; }
+  .site-header .header-cta { order: 1; }
+  .site-header nav {
+    order: 2;
+    flex: 1 0 100%;
+    gap: 1.1rem;
+    overflow-x: auto;
+  }
   .site-header nav a { font-size: 0.85rem; }
 }
 
@@ -120,6 +128,8 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .btn-primary:hover { background: #0057b3; }
 .btn-ghost { border: 1px solid var(--rule); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--ink); }
+.btn-dark { background: var(--ink); color: #fff; }
+.btn-dark:hover { background: #000; }
 
 /* ---------------------------------------------------------
    Hero

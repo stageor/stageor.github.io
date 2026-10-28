@@ -73,17 +73,19 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   display: flex;
   align-items: center;
   gap: 2.2rem;
-  padding-top: 0.95rem;
-  padding-bottom: 0.95rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .site-header .brand {
-  font-family: "Newsreader", Georgia, serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  letter-spacing: -0.01em;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
   color: var(--ink);
   white-space: nowrap;
   margin-right: auto;
+  padding: 0.4rem 0;
 }
 .site-header nav { display: flex; gap: 2rem; }
 .site-header nav a {
@@ -117,7 +119,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
   }
-  .site-header .brand { font-size: 1.1rem; flex: 1 0 auto; margin-right: 0; }
+  .site-header .brand { font-size: 2.1rem; flex: 1 0 auto; margin-right: 0; }
   .site-header .header-cta { order: 1; }
   .site-header nav {
     order: 2;
@@ -150,7 +152,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 /* ---------------------------------------------------------
    About (home page, first block)
 --------------------------------------------------------- */
-#about { padding-top: 4.5rem; }
+#about { padding-top: 3.5rem; }
 .prose {
   display: grid;
   grid-template-columns: 13rem 1fr;

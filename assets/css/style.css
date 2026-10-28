@@ -132,27 +132,17 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .btn-dark:hover { background: #000; }
 
 /* ---------------------------------------------------------
-   Intro (home page — about, merged with portfolio)
+   About (home page, first block)
 --------------------------------------------------------- */
-.intro {
-  padding: 4.5rem 0 3.5rem;
-  max-width: var(--max);
-}
-.intro h1 {
-  font-size: clamp(2.2rem, 5vw, 3rem);
-}
-.intro .role {
-  margin-top: 0.6rem;
-  font-size: 1.15rem;
-  font-weight: 500;
-  color: var(--ink);
-}
-.intro p { font-size: 1.05rem; }
-.intro .links {
-  margin-top: 0.6rem;
+#about { padding-top: 4rem; }
+.prose { max-width: var(--max); }
+.prose p { font-size: 1.07rem; }
+.prose .links {
+  margin-top: 1.2rem;
   display: flex;
-  gap: 1.4rem;
+  gap: 1.6rem;
 }
+.prose .links a { font-weight: 500; }
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */
 .hero.listing {

@@ -1,20 +1,16 @@
 ---
-title: "What Solomon's paradox taught me about my own decisions"
-excerpt: "It's easy to give someone else good advice. It's much harder to take your own."
+title: "Do work that doesn't feel like work"
+excerpt: "You don't need to escape work. You need to escape work that drains you without giving anything back."
 ---
 
-There's a name for something I'd noticed about myself long before I knew it had one: Solomon's paradox. It's the finding that people reason more wisely about other people's problems than about their own, even though the problems can be structurally identical. King Solomon, famous for his wisdom in judging other people's disputes, apparently made a mess of his own life. The pattern is named after him for a reason.
+This one gets misunderstood by a lot of people.
 
-I see it in myself constantly. A friend tells me about a job offer they're unsure about, weighing a higher salary against a worse manager, and within a minute I can lay out the trade-offs clearly, ask the one question that actually matters, and point at the obvious answer. Then a similar decision lands on my own desk, something about whether to push ahead with a particular project direction, or whether to raise a concern with someone, and suddenly I'm circling it for days. Same kind of problem. Completely different quality of thinking.
+They think freedom means doing nothing. They fantasise about retiring early, sitting on a beach, and never having to work another day in their lives. They assume they're exhausted by work itself. But most of the time, they're exhausted by work that feels meaningless. They don't hate effort. They hate spending their lives doing things that never engage their minds.
 
-## Why distance helps
+I'm going to be extremely blunt here. You don't need to escape work. You need to escape work that drains you without giving anything back. Humans are capable of extraordinary effort when curiosity, creativity, and meaningful challenges are involved. In a world where automation keeps eliminating repetitive tasks, the real advantage is finding problems you genuinely want to solve.
 
-The psychological research behind this points to something called self-distancing. When you reason about someone else's situation, you naturally adopt an outsider's perspective: you're not inside the emotion, you're not protecting your own ego, you're not worried about what the decision says about you. You just see the situation and the options. When it's your own problem, all of that gets in the way. You're reasoning from inside the fire, not describing it from across the room.
+Boredom is the enemy.
 
-The fix researchers point to is deceptively simple: ask yourself what you'd tell a friend in your exact position. Not as a one-off thought, but as an actual exercise, imagining the advice you'd genuinely give someone else facing precisely what you're facing. It sounds almost too easy to work, but the mechanism makes sense. You're borrowing the outsider's vantage point you already have, and pointing it at yourself.
+And as soon as you find work that engages your imagination, challenges your abilities, and gives you a reason to keep improving… hard work starts feeling less like a burden and more like something you choose to do.
 
-## Where I've started using it
-
-I've started doing this more deliberately, especially with decisions that have been sitting unresolved for longer than they should. Before committing time to a direction on a project, or deciding whether something is worth raising with a supervisor, I try to write the situation down as if it belonged to someone else, then answer it the way I would for them. It's uncomfortable at first, because the honest answer is often one I'd been avoiding. But the clarity it produces is real, and it's much faster than the days of low-grade circling I'd otherwise spend on the same question.
-
-The paradox isn't really about wisdom at all, not in the sense of having more or less of it. It's about where you're standing when you use it. Most of us have the judgment already. The trick is getting enough distance from our own situation to actually use it on ourselves.
+It's a pattern I can't ignore. The people who stay obsessed with their craft aren't necessarily working fewer hours. They're working on problems they actually care about. They enjoy figuring things out, building things that didn't exist, and pushing their abilities beyond what they thought possible. Stop designing your life around escaping work. Design it around doing work worth getting lost in. That's the real cheat code. Sorry.

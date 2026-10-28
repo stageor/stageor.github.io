@@ -211,18 +211,21 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 }
 .badges {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  width: 100%;
   max-width: 100%;
 }
 .badge-link {
   display: block;
+  flex: 0 1 auto;
   transition: transform 0.3s var(--ease);
 }
 .badge-link:hover { transform: translateY(-2px); }
 .badge-link .badge {
-  width: 3.2rem;
+  width: 5.6rem;
   max-width: 100%;
   height: auto;
   display: block;
@@ -240,7 +243,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   .prose { grid-template-columns: 1fr; gap: 1.2rem; }
   .avatar-col { flex-direction: column; align-items: center; position: static; margin: 0 auto; }
   .prose .avatar { width: 8rem; height: 8rem; }
-  .badge-link .badge { width: 2.75rem; }
+  .badge-link .badge { width: 3.4rem; }
   .badges { gap: 0.4rem; }
 }
 

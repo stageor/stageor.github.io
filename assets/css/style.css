@@ -510,3 +510,20 @@ a:focus-visible, button:focus-visible {
   html { scroll-behavior: auto; }
   .project-art { transition: none; }
 }
+
+/* ---------------------------------------------------------
+   Notes page — site header stays, the app fills the rest
+--------------------------------------------------------- */
+body.notes-embed {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+body.notes-embed .site-footer { display: none; }
+.notes-embed-frame {
+  flex: 1 1 auto;
+  width: 100%;
+  border: 0;
+  display: block;
+}

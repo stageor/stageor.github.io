@@ -243,7 +243,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 @media (max-width: 640px) {
   html { font-size: 15.5px; }
   body { line-height: 1.68; }
-  .wrap { padding: 0 1.5rem; box-sizing: border-box; }
+  .wrap { padding: 0 3rem; box-sizing: border-box; }
 
   p, .prose p, .post-body p, .page-body p, .entry-card p {
     text-align: left;

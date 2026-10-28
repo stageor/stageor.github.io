@@ -14,6 +14,9 @@ collections:
   thoughts:
     output: true
     permalink: /thoughts/:year/:month/:day/:title/
+  notes:
+    output: true
+    permalink: /notes/:year/:month/:day/:title/
 
 defaults:
   - scope:
@@ -28,6 +31,12 @@ defaults:
     values:
       layout: post
       section: thoughts
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: post
+      section: notes
   - scope:
       path: ""
       type: pages

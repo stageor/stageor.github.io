@@ -1,0 +1,29 @@
+---
+layout: default
+title: Notes
+permalink: /notes/
+section: notes
+---
+<section class="hero listing wrap">
+  <div class="eyebrow">University</div>
+  <div class="hero-title-row">
+    <h1>Study Notes</h1>
+    <span class="divider">|</span>
+    <p class="lede">Notes from MSc coursework at the University of Limerick, written up for my own reference.</p>
+  </div>
+</section>
+
+<section class="block wrap">
+  <div class="entry-grid">
+    {% for note in site.notes %}
+    <a class="entry-card" href="{{ note.url | relative_url }}">
+      <div class="meta">{{ note.date | date: "%b %Y" }}</div>
+      <h3>{{ note.title }}</h3>
+      <p>{{ note.excerpt | strip_html | truncate: 120 }}</p>
+      {% if note.tags.size > 0 %}<span class="tag">{{ note.tags | first }}</span>{% endif %}
+    </a>
+    {% else %}
+    <p>No notes yet. Add a markdown file to <code>_notes/</code> to publish the first one.</p>
+    {% endfor %}
+  </div>
+</section>

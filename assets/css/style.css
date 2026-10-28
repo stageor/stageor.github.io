@@ -148,15 +148,14 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
   }
-  .site-header .brand { font-size: 1.2rem; flex: 1 0 auto; margin-right: 0; letter-spacing: 0.06em; }
-  .site-header .header-cta { order: 1; }
+  .site-header .brand { font-size: 1.1rem; flex: 1 0 auto; margin-right: 0; letter-spacing: 0.04em; }
+  .site-header .header-cta { order: 1; padding: 0.5rem 1.05rem; font-size: 0.82rem; }
   .site-header nav {
     order: 2;
     flex: 1 0 100%;
-    gap: 1.1rem;
-    overflow-x: auto;
+    gap: 1.4rem;
   }
-  .site-header nav a { font-size: 0.85rem; }
+  .site-header nav a { font-size: 0.88rem; }
 }
 
 /* ---------------------------------------------------------
@@ -235,16 +234,28 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .prose .links {
   margin-top: 0.9rem;
   display: flex;
-  gap: 1.8rem;
+  flex-wrap: wrap;
+  row-gap: 0.6rem;
+  column-gap: 1.6rem;
 }
 .prose .links a { font-weight: 500; }
 
 @media (max-width: 640px) {
+  body { font-size: 16.5px; }
+  .wrap { padding: 0 1.25rem; }
+  #about { padding-top: 2.5rem; }
   .prose { grid-template-columns: 1fr; gap: 1.2rem; }
   .avatar-col { flex-direction: column; align-items: center; position: static; margin: 0 auto; }
   .prose .avatar { width: 8rem; height: 8rem; }
   .badge-link .badge { width: 3.4rem; }
   .badges { gap: 0.4rem; }
+  section.block { padding: 3rem 0; }
+  .block-head { margin-bottom: 1.8rem; }
+  .hero.listing { padding: 2.5rem 0 1.25rem; }
+  .hero.listing + section.block { padding-top: 0.5rem; }
+  .post-head { padding: 3rem 0 1.75rem; }
+  .post-body { padding: 0 0 3rem; font-size: 1.02rem; }
+  .page-body { padding: 3rem 0 3rem; }
 }
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */

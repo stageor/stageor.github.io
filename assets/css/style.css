@@ -242,7 +242,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 
 @media (max-width: 640px) {
   body { font-size: 16.5px; }
-  .wrap { padding: 0 1.25rem; }
+  .wrap { padding: 0 1.5rem; box-sizing: border-box; }
   #about { padding-top: 2.5rem; }
   .prose { grid-template-columns: 1fr; gap: 1.2rem; }
   .avatar-col { flex-direction: column; align-items: center; position: static; margin: 0 auto; }
@@ -256,6 +256,12 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   .post-head { padding: 3rem 0 1.75rem; }
   .post-body { padding: 0 0 3rem; font-size: 1.02rem; }
   .page-body { padding: 3rem 0 3rem; }
+
+  p, .prose p, .post-body p, .page-body p, .entry-card p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
 }
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */

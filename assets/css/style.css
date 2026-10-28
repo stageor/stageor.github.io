@@ -244,6 +244,8 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   html { font-size: 15.5px; }
   body { line-height: 1.68; }
   .wrap { padding: 0 4rem; box-sizing: border-box; }
+  .site-header .wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .site-footer .wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
 
   p, .prose p, .post-body p, .page-body p, .entry-card p {
     text-align: left;

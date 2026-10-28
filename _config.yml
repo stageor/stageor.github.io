@@ -7,6 +7,7 @@ url: "https://stageor.github.io"
 baseurl: ""
 author: Stanley George
 email: stanley.in.manit@gmail.com
+logo: /assets/images/profile.jpg
 
 # Collections
 collections:
@@ -50,6 +51,7 @@ social:
   name: Stanley George
   links:
     - https://github.com/stageor
+    - https://linkedin.com/in/stanleygeorge01
 
 exclude:
   - README.md

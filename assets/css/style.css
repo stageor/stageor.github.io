@@ -2,18 +2,18 @@
    Tokens
 --------------------------------------------------------- */
 :root {
-  --bg:       #fbfbfd;
+  --bg:       #fbfaf7;
   --surface:  #ffffff;
-  --ink:      #15151a;
-  --ink-soft: #6e6e76;
-  --rule:     rgba(21, 21, 26, 0.08);
-  --accent:       #0068d6;
-  --accent-soft:  #eef5fd;
-  --accent-2:     #e8542c;  /* used once, for the opinion/rant tag */
-  --accent-2-soft:#fdeee8;
+  --ink:      #14171c;
+  --ink-soft: #5c6066;
+  --rule:     rgba(20, 23, 28, 0.1);
+  --accent:       #1f3b57;
+  --accent-soft:  #eaeff4;
+  --accent-2:     #8a6b3c;  /* muted brass — used sparingly, for the rant tag and small accents */
+  --accent-2-soft:#f3ede1;
   --max: 42rem;
-  --max-wide: 56rem;
-  --radius: 22px;
+  --max-wide: 76rem;
+  --radius: 20px;
 }
 
 * { box-sizing: border-box; }
@@ -31,10 +31,11 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
   color: var(--ink);
   margin: 0;
 }
@@ -53,7 +54,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .wrap {
   max-width: var(--max-wide);
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 2rem;
 }
 
 /* ---------------------------------------------------------
@@ -63,7 +64,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(251, 251, 253, 0.78);
+  background: rgba(251, 250, 247, 0.8);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--rule);
@@ -71,28 +72,43 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 .site-header .wrap {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  gap: 2.2rem;
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
 }
 .site-header .brand {
-  font-weight: 700;
-  font-size: 1rem;
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
   letter-spacing: -0.01em;
   color: var(--ink);
   white-space: nowrap;
   margin-right: auto;
 }
-.site-header nav { display: flex; gap: 1.8rem; }
+.site-header nav { display: flex; gap: 2rem; }
 .site-header nav a {
+  position: relative;
   color: var(--ink-soft);
   font-size: 0.92rem;
   font-weight: 500;
   white-space: nowrap;
+  padding-bottom: 0.25rem;
+}
+.site-header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--accent-2);
+  transition: right 0.2s ease;
 }
 .site-header nav a:hover,
 .site-header nav a.active { color: var(--ink); }
-.site-header .header-cta { flex: 0 0 auto; padding: 0.5rem 1.2rem; font-size: 0.88rem; }
+.site-header nav a:hover::after,
+.site-header nav a.active::after { right: 0; }
+.site-header .header-cta { flex: 0 0 auto; padding: 0.55rem 1.3rem; font-size: 0.88rem; }
 
 @media (max-width: 680px) {
   .site-header .wrap {
@@ -101,7 +117,7 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
   }
-  .site-header .brand { font-size: 0.95rem; flex: 1 0 auto; margin-right: 0; }
+  .site-header .brand { font-size: 1.1rem; flex: 1 0 auto; margin-right: 0; }
   .site-header .header-cta { order: 1; }
   .site-header nav {
     order: 2;
@@ -125,20 +141,20 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 .btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: #0057b3; }
+.btn-primary:hover { background: #162a3e; }
 .btn-ghost { border: 1px solid var(--rule); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--ink); }
 .btn-dark { background: var(--ink); color: #fff; }
-.btn-dark:hover { background: #000; }
+.btn-dark:hover { background: var(--accent); }
 
 /* ---------------------------------------------------------
    About (home page, first block)
 --------------------------------------------------------- */
-#about { padding-top: 4rem; }
+#about { padding-top: 4.5rem; }
 .prose {
   display: grid;
-  grid-template-columns: 11rem 1fr;
-  gap: 2.4rem;
+  grid-template-columns: 13rem 1fr;
+  gap: 3rem;
   align-items: start;
 }
 .prose .avatar {
@@ -148,20 +164,20 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   border-radius: var(--radius);
   position: sticky;
   top: 6rem;
+  box-shadow: 0 1px 2px rgba(20, 23, 28, 0.06);
 }
-.prose-text { max-width: 36rem; }
-.prose p { font-size: 1.07rem; }
+.prose-text { max-width: none; }
+.prose p { font-size: 1.1rem; }
 .prose .links {
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
   display: flex;
-  gap: 1.6rem;
+  gap: 1.8rem;
 }
 .prose .links a { font-weight: 500; }
 
 @media (max-width: 640px) {
   .prose { grid-template-columns: 1fr; gap: 1.2rem; }
   .prose .avatar { width: 6.5rem; height: 6.5rem; position: static; }
-  .prose-text { max-width: none; }
 }
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */
@@ -176,9 +192,9 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
   margin-bottom: 0.6rem;
 }
 .hero.listing.opinion-hero .eyebrow { color: var(--accent-2); }
-.hero.listing h1 { font-size: clamp(2.2rem, 5vw, 3rem); }
+.hero.listing h1 { font-size: clamp(2.2rem, 5vw, 3.1rem); }
 .hero.listing p.lede {
-  max-width: 34rem;
+  max-width: 38rem;
   margin-top: 1rem;
   font-size: 1.1rem;
   color: var(--ink-soft);
@@ -187,28 +203,26 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 /* ---------------------------------------------------------
    Sections
 --------------------------------------------------------- */
-section.block { padding: 5rem 0; }
+section.block { padding: 5.5rem 0; }
 .block-head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
   gap: 1rem;
 }
-.block-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.block-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
 .block-head .see-all { font-size: 0.95rem; font-weight: 500; white-space: nowrap; }
 
 /* ---------------------------------------------------------
-   Project panels — the one bold device on this site.
-   Each project gets a domain-coded gradient tile standing in
-   for product art, since there are no screenshots to show.
+   Project panels
 --------------------------------------------------------- */
 .project {
   display: grid;
-  grid-template-columns: 13rem 1fr;
-  gap: 2rem;
+  grid-template-columns: 17rem 1fr;
+  gap: 2.6rem;
   align-items: start;
-  padding: 2.5rem 0;
+  padding: 2.8rem 0;
 }
 .project + .project { border-top: 1px solid var(--rule); }
 
@@ -219,21 +233,26 @@ section.block { padding: 5rem 0; }
   object-fit: cover;
   display: block;
   background: var(--surface);
-  box-shadow: inset 0 0 0 1px var(--rule);
+  box-shadow: inset 0 0 0 1px var(--rule), 0 1px 2px rgba(20, 23, 28, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project:hover .project-art {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px var(--rule), 0 10px 24px rgba(20, 23, 28, 0.1);
 }
 
-.project h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.project h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .project .stack {
   display: block;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--ink-soft);
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
 }
 .project p { margin-bottom: 0.9rem; }
 .project .links a { font-weight: 500; font-size: 0.95rem; }
 
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .project { grid-template-columns: 1fr; gap: 1.2rem; }
   .project-art { aspect-ratio: 16 / 9; }
 }
@@ -242,7 +261,7 @@ section.block { padding: 5rem 0; }
    Blog / thoughts entries
 --------------------------------------------------------- */
 .entry {
-  padding: 1.8rem 0;
+  padding: 1.9rem 0;
   display: grid;
   grid-template-columns: 9rem 1fr;
   gap: 1.8rem;
@@ -253,10 +272,10 @@ section.block { padding: 5rem 0; }
   color: var(--ink-soft);
   padding-top: 0.15rem;
 }
-.entry h3 { font-size: 1.2rem; margin-bottom: 0.4rem; font-weight: 600; letter-spacing: -0.01em; }
+.entry h3 { font-size: 1.25rem; margin-bottom: 0.4rem; font-weight: 600; letter-spacing: -0.01em; }
 .entry h3 a { color: var(--ink); }
 .entry h3 a:hover { color: var(--accent); }
-.entry p { margin-bottom: 0.6rem; font-size: 0.98rem; }
+.entry p { margin-bottom: 0.6rem; font-size: 0.98rem; max-width: 42rem; }
 .entry .tag {
   display: inline-block;
   font-size: 0.78rem;
@@ -277,7 +296,7 @@ section.block { padding: 5rem 0; }
 --------------------------------------------------------- */
 .post-head {
   padding: 5rem 0 2.5rem;
-  max-width: var(--max);
+  max-width: 44rem;
   margin: 0 auto;
 }
 .post-head .eyebrow {
@@ -287,7 +306,7 @@ section.block { padding: 5rem 0; }
   margin-bottom: 0.9rem;
 }
 .post-head .eyebrow.opinion { color: var(--accent-2); }
-.post-head h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.post-head h1 { font-size: clamp(2.1rem, 4vw, 2.9rem); }
 .post-head .sub-meta {
   margin-top: 1.1rem;
   font-size: 0.92rem;
@@ -295,13 +314,13 @@ section.block { padding: 5rem 0; }
 }
 
 .post-body {
-  max-width: var(--max);
+  max-width: 44rem;
   margin: 0 auto;
   padding: 0 0 5rem;
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
-.post-body h2 { font-size: 1.5rem; margin: 2em 0 0.6em; font-weight: 700; }
-.post-body h3 { font-size: 1.2rem; margin: 1.6em 0 0.5em; font-weight: 700; }
+.post-body h2 { font-size: 1.55rem; margin: 2em 0 0.6em; font-weight: 600; }
+.post-body h3 { font-size: 1.25rem; margin: 1.6em 0 0.5em; font-weight: 600; }
 .post-body img { max-width: 100%; border-radius: 12px; }
 .post-body pre {
   background: var(--ink);
@@ -324,20 +343,20 @@ section.block { padding: 5rem 0; }
    Page (about, etc.)
 --------------------------------------------------------- */
 .page-body {
-  max-width: var(--max);
+  max-width: 44rem;
   margin: 0 auto;
   padding: 5rem 0 5rem;
 }
-.page-body h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 1.3rem; }
+.page-body h1 { font-size: clamp(2rem, 4vw, 2.7rem); margin-bottom: 1.3rem; }
 .page-body p { font-size: 1.08rem; }
-.page-body h2 { font-size: 1.3rem; margin: 2em 0 0.6em; font-weight: 700; }
+.page-body h2 { font-size: 1.35rem; margin: 2em 0 0.6em; font-weight: 600; }
 
 /* ---------------------------------------------------------
    Footer
 --------------------------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--rule);
-  padding: 2.2rem 0;
+  padding: 2.4rem 0;
 }
 .site-footer .wrap {
   display: flex;
@@ -357,4 +376,5 @@ a:focus-visible, button:focus-visible {
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .project-art { transition: none; }
 }

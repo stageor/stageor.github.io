@@ -12,7 +12,7 @@
   --accent-2:     #e8542c;  /* used once, for the opinion/rant tag */
   --accent-2-soft:#fdeee8;
   --max: 42rem;
-  --max-wide: 68rem;
+  --max-wide: 56rem;
   --radius: 22px;
 }
 
@@ -135,27 +135,33 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
    About (home page, first block)
 --------------------------------------------------------- */
 #about { padding-top: 4rem; }
-.prose { max-width: var(--max); }
+.prose {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2.4rem;
+  align-items: start;
+}
 .prose .avatar {
-  float: left;
-  width: 9rem;
-  height: 9rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
-  margin: 0.2rem 1.6rem 1rem 0;
-  shape-outside: margin-box;
+  position: sticky;
+  top: 6rem;
 }
+.prose-text { max-width: 36rem; }
 .prose p { font-size: 1.07rem; }
 .prose .links {
-  margin-top: 1.2rem;
+  margin-top: 0.8rem;
   display: flex;
   gap: 1.6rem;
-  clear: left;
 }
 .prose .links a { font-weight: 500; }
 
-@media (max-width: 480px) {
-  .prose .avatar { width: 6.5rem; height: 6.5rem; margin-right: 1.1rem; }
+@media (max-width: 640px) {
+  .prose { grid-template-columns: 1fr; gap: 1.2rem; }
+  .prose .avatar { width: 6.5rem; height: 6.5rem; position: static; }
+  .prose-text { max-width: none; }
 }
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */
@@ -199,9 +205,9 @@ section.block { padding: 5rem 0; }
 --------------------------------------------------------- */
 .project {
   display: grid;
-  grid-template-columns: 15rem 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  grid-template-columns: 13rem 1fr;
+  gap: 2rem;
+  align-items: start;
   padding: 2.5rem 0;
 }
 .project + .project { border-top: 1px solid var(--rule); }
@@ -210,14 +216,11 @@ section.block { padding: 5rem 0; }
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
-  background: var(--art);
+  object-fit: cover;
+  display: block;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--rule);
 }
-.art-1 { --art: linear-gradient(135deg, #0068d6, #39c5f1); }
-.art-2 { --art: linear-gradient(135deg, #0a7c6b, #5fe0b8); }
-.art-3 { --art: linear-gradient(135deg, #5b3dd6, #9a7bff); }
-.art-4 { --art: linear-gradient(135deg, #e8542c, #ffb14d); }
-.art-5 { --art: linear-gradient(135deg, #b0591f, #7fae4a); }
-.art-6 { --art: linear-gradient(135deg, #1f6b4a, #58b68a); }
 
 .project h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
 .project .stack {
@@ -227,10 +230,10 @@ section.block { padding: 5rem 0; }
   color: var(--ink-soft);
   margin-bottom: 0.7rem;
 }
-.project p { max-width: 38rem; margin-bottom: 0.9rem; }
+.project p { margin-bottom: 0.9rem; }
 .project .links a { font-weight: 500; font-size: 0.95rem; }
 
-@media (max-width: 760px) {
+@media (max-width: 640px) {
   .project { grid-template-columns: 1fr; gap: 1.2rem; }
   .project-art { aspect-ratio: 16 / 9; }
 }

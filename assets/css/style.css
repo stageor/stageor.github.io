@@ -136,13 +136,27 @@ p { margin: 0 0 1.2em; color: var(--ink-soft); font-weight: 400; }
 --------------------------------------------------------- */
 #about { padding-top: 4rem; }
 .prose { max-width: var(--max); }
+.prose .avatar {
+  float: left;
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 0.2rem 1.6rem 1rem 0;
+  shape-outside: margin-box;
+}
 .prose p { font-size: 1.07rem; }
 .prose .links {
   margin-top: 1.2rem;
   display: flex;
   gap: 1.6rem;
+  clear: left;
 }
 .prose .links a { font-weight: 500; }
+
+@media (max-width: 480px) {
+  .prose .avatar { width: 6.5rem; height: 6.5rem; margin-right: 1.1rem; }
+}
 
 /* Listing-page hero (blog / thoughts) — left aligned, compact */
 .hero.listing {

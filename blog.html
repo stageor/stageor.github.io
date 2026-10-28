@@ -11,16 +11,16 @@ section: blog
 </section>
 
 <section class="block wrap">
-  {% for post in site.posts %}
-  <div class="entry">
-    <div class="meta">{{ post.date | date: "%b %Y" }}</div>
-    <div>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+  <div class="entry-grid">
+    {% for post in site.posts %}
+    <a class="entry-card" href="{{ post.url | relative_url }}">
+      <div class="meta">{{ post.date | date: "%b %Y" }}</div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
       {% if post.tags.size > 0 %}<span class="tag">{{ post.tags | first }}</span>{% endif %}
-    </div>
+    </a>
+    {% else %}
+    <p>No posts yet. Add a markdown file to <code>_posts/</code> to publish your first one.</p>
+    {% endfor %}
   </div>
-  {% else %}
-  <p>No posts yet. Add a markdown file to <code>_posts/</code> to publish your first one.</p>
-  {% endfor %}
 </section>

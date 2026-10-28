@@ -3,6 +3,47 @@ layout: default
 title: Notes
 permalink: /notes/
 section: notes
-body_class: notes-embed
 ---
-<iframe class="notes-embed-frame" src="{{ '/notes/app.html' | relative_url }}" title="Study notes"></iframe>
+<section class="hero listing wrap">
+  <div class="eyebrow">University</div>
+  <div class="hero-title-row">
+    <h1>Study Notes</h1>
+    <span class="divider">|</span>
+    <p class="lede">Everything I studied during my MSc at the University of Limerick, written up for my own reference.</p>
+  </div>
+</section>
+
+<section class="block wrap">
+  <div class="entry-grid">
+    <a class="entry-card" href="{{ '/notes/app.html#cs6271' | relative_url }}" target="_blank" rel="noopener">
+      <div class="meta">CS6271</div>
+      <h3>Evolutionary Computation and Humanoid Robotics</h3>
+      <p>Search by selection and variation: genetic algorithms, representations, crossover and mutation, selection pressure, multi-objective fronts and evolved robot gaits.</p>
+      <span class="tag">Interactive</span>
+    </a>
+    <a class="entry-card" href="{{ '/notes/app.html#ce4317' | relative_url }}" target="_blank" rel="noopener">
+      <div class="meta">CE4317</div>
+      <h3>Introduction to Machine Learning</h3>
+      <p>The core supervised and unsupervised toolkit: data preparation, regression, classification, trees, clustering, model selection and the metrics that judge them.</p>
+      <span class="tag">Interactive</span>
+    </a>
+    <a class="entry-card" href="{{ '/notes/app.html#ce6021' | relative_url }}" target="_blank" rel="noopener">
+      <div class="meta">CE6021</div>
+      <h3>Machine Vision</h3>
+      <p>From a camera sensor to segmented regions: sampling and quantisation, convolution, filtering, morphology, Fourier analysis, edges, corners and clustering.</p>
+      <span class="tag">Interactive</span>
+    </a>
+    <a class="entry-card" href="{{ '/notes/app.html#ee6041' | relative_url }}" target="_blank" rel="noopener">
+      <div class="meta">EE6041</div>
+      <h3>Text Analytics and Natural Language Processing</h3>
+      <p>Turning text into something a model can use: tokenisation, normalisation, language models, vector semantics, embeddings, sequence labelling and attention.</p>
+      <span class="tag">Interactive</span>
+    </a>
+    <a class="entry-card" href="{{ '/notes/app.html#cs4096' | relative_url }}" target="_blank" rel="noopener">
+      <div class="meta">CS4096</div>
+      <h3>Artificial Intelligence for Games</h3>
+      <p>Building the illusion of intelligence: finite state machines, goal-driven motivation, behaviour trees, A* and nav meshes, and perception systems.</p>
+      <span class="tag">Interactive</span>
+    </a>
+  </div>
+</section>

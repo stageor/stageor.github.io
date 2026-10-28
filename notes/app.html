@@ -9473,7 +9473,7 @@ function openModule(code, push){
  const homeBtn=document.createElement('button');
  homeBtn.type='button'; homeBtn.className='nav-home';
  homeBtn.innerHTML='&larr; All modules';
- homeBtn.addEventListener('click', showHome);
+ homeBtn.addEventListener('click', function(){ window.location.href='/notes/'; });
  nav.appendChild(homeBtn);
  nav.appendChild(mod.navFrag.cloneNode(true));
  /* cloned nodes lose their listeners, so rebind the accordions */
@@ -9515,7 +9515,7 @@ function showHome(){
  window.scrollTo(0, homeScrollY);
  history.replaceState(null,'','#');
 }
-document.getElementById('backModules').addEventListener('click', showHome);
+document.getElementById('backModules').addEventListener('click', function(){ window.location.href='/notes/'; });
 navToggle.addEventListener('click', ()=> nav.classList.toggle('open'));
 nav.addEventListener('click', e=>{ if(e.target.tagName==='A') nav.classList.remove('open'); });
 
@@ -16599,7 +16599,7 @@ function openModuleAt(code, lessonId){
  });
 }
 document.getElementById('planLink').addEventListener('click', showPlan);
-document.getElementById('planBack').addEventListener('click', hidePlan);
+document.getElementById('planBack').addEventListener('click', function(){ window.location.href='/notes/'; });
 
 /* ---------- deep links, last so every view exists ---------- */
 (function(){
@@ -17353,8 +17353,8 @@ document.addEventListener('click',function(e){
  }
  if(a.hasAttribute('data-kxover')){ e.preventDefault(); var c=currentCode(); if(c) showOverview(c); return; }
  if(a.hasAttribute('data-kxhome')){
-  e.preventDefault(); hideKx();
-  if(typeof window.showHome==='function') window.showHome();
+  e.preventDefault();
+  window.location.href='/notes/';
   return;
  }
  if(a.hasAttribute('data-kxcards')){

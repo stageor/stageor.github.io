@@ -512,58 +512,28 @@ a:focus-visible, button:focus-visible {
 }
 
 /* ---------------------------------------------------------
-   Stacks I Use (below Projects): one colour per area,
-   technologies as tinted chips
+   Stacks I Use: technologies as light, pastel chips
 --------------------------------------------------------- */
-.block-head .ts-total {
-  font-size: 0.95rem;
-  color: var(--ink-soft);
-  white-space: nowrap;
-}
-.ts-list { display: grid; gap: 0.8rem; }
-.ts-cols { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
-.ts-group {
-  min-width: 0;
-  padding: 1rem 1.2rem 1.1rem;
-  border-left: 5px solid var(--c);
-  border-radius: 0 14px 14px 0;
-  background: #fafafa;
-  background: color-mix(in srgb, var(--c) 6%, #fff);
-}
-.ts-title {
-  margin: 0 0 0.7rem;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 1.02rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--c);
-}
-.ts-count {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--ink-soft);
-}
-.ts-chips {
+.ts-cloud {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem 0.5rem;
+  gap: 0.6rem 0.65rem;
 }
-.ts-chips li {
-  font-size: 0.86rem;
-  font-weight: 600;
-  line-height: 1.35;
+.ts-cloud li {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
   color: var(--ink);
-  padding: 0.2rem 0.55rem;
-  border-radius: 6px;
-  background: #fff;
-  background: color-mix(in srgb, var(--c) 13%, #fff);
-  border-bottom: 2px solid var(--c);
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: #f4f5f7;
+  background: color-mix(in srgb, var(--c) 9%, #fff);
+  border: 1px solid #e6e8ec;
+  border: 1px solid color-mix(in srgb, var(--c) 22%, #fff);
 }
 @media (max-width: 640px) {
-  .block-head .ts-total { white-space: normal; }
-  .ts-group { padding: 0.9rem 0.9rem 1rem; }
-  .ts-chips li { font-size: 0.82rem; }
+  .ts-cloud li { font-size: 0.88rem; padding: 0.4rem 0.8rem; }
 }

@@ -101,6 +101,73 @@ title: Home
     <h2>Projects</h2>
   </div>
 
+  <div class="project project-game" id="orchard">
+    <div class="project-art game-art" role="img" aria-label="Orchard of the Last Season">
+      <span>Orchard of the<br>Last Season</span>
+    </div>
+    <div>
+      <h3>Orchard of the Last Season</h3>
+      <span class="stack">Unity 6 · C# · Behaviour trees · FSM · Utility AI · A* · Boids</span>
+      <p>
+        A top-down defence game where a farmer and two dogs guard six fruit trees across 13 nights.
+        Every enemy runs on a different AI technique: a behaviour tree drives the helper Pip, a
+        finite state machine drives the dog Thistle, Shamblers pick actions with utility AI and A*
+        pathfinding, Stalkers use a view-cone perception model, and birds flock with boids.
+        Maps are generated procedurally and validated with a BFS reachability check.
+      </p>
+      <div class="snippets">
+        <figure>
+          <figcaption>Behaviour tree (Pip)</figcaption>
+<pre><code>root = new BTSelector(new BTNode[] {
+  new BTSequence(new BTNode[] {
+    new BTAction(IsHurt),
+    new BTAction(RetreatToFarmer) }),
+  new BTSequence(new BTNode[] {
+    new BTAction(HasDamagedTree),
+    new BTAction(GoToTree),
+    new BTAction(RepairTree) }),
+  new BTAction(FollowFarmer)
+});</code></pre>
+        </figure>
+        <figure>
+          <figcaption>Utility AI (Shambler)</figcaption>
+<pre><code>// multiply considerations, then
+// correct for how many there are
+public static double Score(double weight,
+                           params double[] cons)
+{
+  double s = 1;
+  foreach (double c in cons) s *= Clamp01(c);
+  int n = cons.Length;
+  if (n &gt; 1 &amp;&amp; s &gt; 0)
+    s += (1 - s) * (1.0 - 1.0 / n) * s;
+  return weight * s;
+}</code></pre>
+        </figure>
+        <figure>
+          <figcaption>A* pathfinding</figcaption>
+<pre><code>while (open.Count &gt; 0) {
+  int cur = open.Pop();
+  if (closed[cx, cy]) continue;
+  closed[cx, cy] = true;
+  if (isGoal[cx, cy]) return Rebuild(cur);
+  for (int k = 0; k &lt; 8; k++) {
+    // no corner cutting on diagonals
+    double ng = gS[cx, cy] + step;
+    if (ng &gt;= gS[nx, ny]) continue;
+    gS[nx, ny] = ng; parent[nx, ny] = cur;
+    open.Push(ng + H(nx, ny, goals), nx * N + ny);
+  }
+}</code></pre>
+        </figure>
+      </div>
+      <div class="game-actions">
+        <a class="btn btn-primary" href="https://stageor.github.io/orchard-of-the-last-season/" target="_blank" rel="noopener">Play the game</a>
+        <a class="btn btn-ghost" href="https://github.com/stageor/orchard-of-the-last-season" target="_blank" rel="noopener">View the repository</a>
+      </div>
+    </div>
+  </div>
+
   <div class="project">
     <img class="project-art img-fade" src="https://images.pexels.com/photos/4597280/pexels-photo-4597280.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Server racks in a data center" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.classList.add('is-loaded')">
     <div>

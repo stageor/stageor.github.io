@@ -537,3 +537,27 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 640px) {
   .ts-cloud li { font-size: 0.88rem; padding: 0.4rem 0.8rem; }
 }
+
+/* Orchard game project */
+.game-art {
+  display: flex; align-items: flex-end;
+  aspect-ratio: 4 / 3; padding: 1.1rem;
+  background: linear-gradient(160deg, #3f6b3a 0%, #2a4a2a 60%, #1c2f1f 100%);
+  color: #f3ecd2; font-weight: 600; font-size: 1.25rem; line-height: 1.2;
+}
+.snippets {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem; margin: 1.1rem 0 1.3rem;
+}
+.snippets figure { margin: 0; min-width: 0; }
+.snippets figcaption {
+  font-size: 0.8rem; font-weight: 500; color: var(--ink-soft); margin-bottom: 0.4rem;
+}
+.snippets pre {
+  margin: 0; background: var(--ink); color: #f2f3f5;
+  padding: 0.85rem 1rem; border-radius: 12px; overflow-x: auto;
+  font-size: 0.72rem; line-height: 1.5;
+}
+.snippets code { background: none; padding: 0; }
+.game-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+@media (max-width: 900px) { .snippets { grid-template-columns: 1fr; } }
